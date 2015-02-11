@@ -35,9 +35,6 @@ article.post h2 a {
 	text-decoration: none;
 }
 
-article.post p {
-    font-size: 15px; line-height: 26px; color: #090707;}
-
 article.post div.post-meta {
 	font-size: 0.9em;
 	margin-bottom: 7px;

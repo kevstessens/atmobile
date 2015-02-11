@@ -174,7 +174,7 @@ body .text-bg-dark {
 
 /* Paragraphs */
 p {
-	color: #697381;
+	color: #87919F;
 	line-height: 22px;
 	margin: 0 0 20px;
 }
@@ -1064,17 +1064,10 @@ ul.nav-list.primary > li:hover a {
 }
 
 /* Nav Pills */
-ul.nav-pills > li > a {
-    color: white;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    margin-top: 3px;
-}
-ul.nav-pills > li > a:hover {
-    color: #e36159;
-}
+ul.nav-pills > li > a,
+ul.nav-pills > li > a:hover,
 ul.nav-pills > li > a:focus {
-	color: white;
+	color: #87919F;
 }
 
 ul.nav-pills > li.active > a,
@@ -2520,7 +2513,7 @@ span.word-rotate-items span {
 
 .masonry-list.full {
 	margin-left: 1.2%;
-	width: 98%;
+	width: 99.5%;
 }
 
 .masonry-list.full div.featured-box {

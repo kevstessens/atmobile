@@ -352,6 +352,7 @@
 	/* Timeline */
 	section.timeline .timeline-box,
 	section.timeline .timeline-box.right {
+		float: none;
 		clear: both;
 		right: auto;
 		left: auto;

@@ -131,7 +131,7 @@ Version: 		1.1.0 - Fri Jan 31 2014 18:12:18
 
 				e.preventDefault();
 
-                addActiveClass = $(this).parent().hasClass("resp-active");
+				addActiveClass = $(this).parent().hasClass("resp-active");
 
 				$("#mainMenu").find(".resp-active").removeClass("resp-active");
 
@@ -188,8 +188,7 @@ Version: 		1.1.0 - Fri Jan 31 2014 18:12:18
 				$this = this,
 				lastScrollTop = 0,
 				headerHeightSticky,
-				logoSmallHeight = logo.attr("data-small-height"),
-                navCat = document.getElementsByClassName("nav-cat")[0];
+				logoSmallHeight = logo.attr("data-small-height");
 
 			logo
 				.css("height", logoSmallHeight);
@@ -225,7 +224,6 @@ Version: 		1.1.0 - Fri Jan 31 2014 18:12:18
 
 					logoWrapper.addClass("logo-sticky-active");
 
-                    navCat.className = navCat.className + " nav-cat-sticky";
 					logo.animate({
 						width: logoSmallWidth,
 						height: logoSmallHeight
@@ -238,8 +236,6 @@ Version: 		1.1.0 - Fri Jan 31 2014 18:12:18
 				} else {
 
 					if(body.hasClass("sticky-menu-active")) {
-
-                        navCat.className = "nav-cat";
 
 						body.removeClass("sticky-menu-active");
 
@@ -965,10 +961,7 @@ Version: 		1.1.0 - Fri Jan 31 2014 18:12:18
 
 		// Masonry
 		Core.masonry();
-        $('#button-initial').click();
-        setTimeout(function () {
-            $('#myModal').click();
-        }, 6000);
+
 	});
 
 })();
