@@ -955,6 +955,8 @@ Version: 		1.1.0 - Fri Jan 31 2014 18:12:18
 	Core.initialize();
 
 	$(window).load(function () {
+	moment.lang('es');
+
 Core.stickyMenu();
 $.blockUI({ css: {
                     border: 'none',
@@ -969,27 +971,43 @@ $.blockUI({ css: {
 $.getJSON( "http://atodomotor.com.ar/articles-json.json", function( data ) {
               var items = [];
               $.each( data, function( key, val ) {
-                items.push( "<li class='masonry-item'>" +"<div class='featured-box'>"+
-                            "<div class='box-content'>"+
-
-                  
-                                "<a href='show.html?id=" + val.slug +"'><article class='post post-medium'>"+
-                                    "<div class='row'>"+
-
-                                        "<div class='col-md-12'>"+
-                                                "<div><div class='post-image'>"+
-                                                        "<img class='img-responsive img-rounded' src='" + val.facebook_image.video_thumb.url +"' alt=''>"+
-                                                    "</div>"+
-                                                "</div></div></div>"+"<div class='row'>"+
-                                        "<div class='col-md-12'>"+
-
-                                            "<div class='post-content'>"+
-                                                "<h4>"+ val.title+"</h4>"+
-                                            "</div>"+
-                                        "</div>"+
-
-                                    "</div>"
-                                                                                    +"</article></a></div></div></li>" );
+                items.push( "<li class='masonry-item'>"+
+					"<div class='featured-box'>"+
+						"<div class='box-content'>"+
+							"<a href='show.html?id=" + val.slug +"'>"+
+								"<article class='post post-medium'>"+
+									"<div class='row'>"+
+										"<div class='col-md-12'>"+
+											"<div>"+
+												"<div class='post-image'>"+
+													"<img class='img-responsive img-rounded' src='" + val.facebook_image.video_thumb.url +"' alt='' style='width: 100%;'>"+
+												"</div>"+
+											"</div>"+
+										"</div>"+
+									"</div>"+
+									"<div class='row'>"+
+										"<div class='col-md-12'>"+
+											"<div class='post-content'>"+
+												"<h4>"+ val.title+"</h4>"+
+											"</div>"+
+										"</div>"+
+									"</div>"+
+									"<div class='row'>"+
+										"<div class='col-md-12'>"+
+											"<div class='post-meta'>"+
+												"<span>"+
+													"<i class='icon icon-calendar'>"+
+													"</i> "+
+													moment(val.publication_date).calendar()+
+												"</span>"+
+											"</div>"+
+										"</div>"+
+									"</div>"+
+								"</article>"+
+							"</a>"+
+						"</div>"+
+					"</div>"+
+				"</li>" );
               });     
 
 
