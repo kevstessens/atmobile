@@ -167,7 +167,7 @@
      $(document).ready(function(){
         
 
- $.getJSON( "http://atodomotor.com.ar/articles/"+getUrlVars()["id"]+".json", function( data ) {
+ $.getJSON( "http://atodomotor.com.ar/article-json/"+getUrlVars()["id"]+".json", function( data ) {
               testing =data;
               var items = [];
                items.push( 
@@ -196,7 +196,7 @@
                                 "<article class='post post-large blog-single-post'>"+
                                         "<div>"+
                                             "<div class='post-image'>"+
-                                                "<img class='img-responsive img-rounded' src='' alt=''>"+
+                                                "<img class='img-responsive img-rounded' src='"+ testing.facebook_image.article_big.url+"' alt=''>"+
                                             "</div>"+
                                         "</div>"+
 
