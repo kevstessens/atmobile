@@ -973,7 +973,7 @@ $.getJSON( "http://atodomotor.com.ar/articles-json.json", function( data ) {
                             "<div class='box-content'>"+
 
                   
-                                "<a href='/show.html?id=" + val.slug +"'><article class='post post-medium'>"+
+                                "<a href='show.html?id=" + val.slug +"'><article class='post post-medium'>"+
                                     "<div class='row'>"+
 
                                         "<div class='col-md-12'>"+
