@@ -85,72 +85,41 @@
                     </button>
                 </div>
             </header>
+            <div role="main" class="main">
 
-            <div role="main" class="main" style="margin-bottom:20px;">
-        
-               <!--  <ul class="masonry-list full featured-boxes">
-                    <li class="masonry-item">
+            <div class="row featured-boxes" style="margin:0px;">
 
-                        <div class="featured-box">
-                            <div class="box-content">
 
-                                <article class="post post-medium">
-                                    <div class="row">
+  <div class="container">
 
-                                        <div class="col-md-12">
-                                            <div class="owl-carousel" data-plugin-options='{"items": 1, "transitionStyle": "fade"}'>
-                                                <div>
-                                                    <div class="post-image">
-                                                        <img class="img-responsive img-rounded" src="img/blog/blog-image-2.jpg" alt="">
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <div class="post-image">
-                                                        <img class="img-responsive img-rounded" src="img/blog/blog-image-3.jpg" alt="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
 
-                                            <div class="post-content">
-                                                <h4><a href="blog-post.html">Class aptent taciti sociosqu ad litora.</a></h4>
-                                                <p>Euismod atras vulputate iltricies etri elit. </p>
-                                            </div>
-                                        </div>
+    <section class="timeline" id="timeline" style="margin-top:105px; ">
+      <div class="timeline-body">
 
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="post-meta">
-                                                <span><i class="icon icon-calendar"></i> January 10, 2013 </span><br>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="post-meta">
-                                                <span><i class="icon icon-user"></i> By <a href="#">John Doe</a> </span>
-                                                <span><i class="icon icon-tag"></i> <a href="#">Duis</a>, <a href="#">News</a> </span>
-                                                <span><i class="icon icon-comments"></i> <a href="#">12 Comments</a></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <a href="blog-post.html" class="btn btn-xs btn-primary pull-right">Read more...</a>
-                                        </div>
-                                    </div>
 
-                                </article>
-                            </div>
-                        </div>
-                    </li>
-                </ul> -->
 
-            </div>
+     </div>
+
+
+
+    </section>
+
+  </div>
+  </div>
+
+  <script>
+      videos();
+  </script>
+  <script>
+      function stop(){
+          var iframe = document.getElementById('mainVideo');
+          iframe.src = iframe.src;
+      }
+  </script>
+
+  <script src="/assets/pagination.js.coffee"></script>
+
+</div>
 
 <footer id="footer" style="padding-top: 5px;position: fixed;bottom: -5px;width: 100%;z-index: 3000;">
 <div class="footer-copyright" style="margin-top: 0px; padding-top: 0px;">
@@ -160,6 +129,7 @@
         </div>
         <div class="col-md-6" style="margin-bottom: 15px;">
 
+          
         </div>
         <p style="text-align: right"><a href="http://www.atodomotorweb.com"> A Todo Motor</a>.
           By<a href="http://www.flipstudios.com.ar" target="_blank"> Kevin Stessens</a></p>
@@ -192,14 +162,108 @@
         <!-- Current Page Scripts -->
         <script src="js/views/view.home.js"></script>
 
-
-        <script src="js/loading.js"></script>
-        
         <!-- Theme Initializer -->
-        <script src="js/theme_index.js"></script>
+        <script src="js/theme.js"></script>
 
         <!-- Custom JS -->
         <script src="js/custom.js"></script>
+                <script src="js/loading.js"></script>
+
+<script type="text/javascript">
+    $.blockUI({ css: {
+                    border: 'none',
+                    padding: '15px',
+                    backgroundColor: '#000',
+                    '-webkit-border-radius': '10px',
+                    '-moz-border-radius': '10px',
+                    opacity: .5,
+                    color: '#fff'
+                } });
+</script>
+
+<script type="text/javascript">
+    function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+</script>
+
+
+        <script>
+        
+     $(document).ready(function(){
+        
+
+ $.getJSON( "http://atodomotor.com.ar/videos-json.json", function( data ) {
+              testing =data;
+              var items = [];
+            $.each( data, function( key, val ) {
+               items.push( 
+
+                   "<article class='timeline-box' onclick='stop();' style='height:270px;'>"+
+                "<div class='portfolio-item'>"+
+                  "<a href='#' class='thumb-info secundary'>"+
+
+                        "<span class='thumb-info-image'  data-target='#ytplayer-" + key+ "' data-toggle='modal' onclick='loadVideo(" + key + ",\""+ val.small_url+ "\")'>"+
+                    "<span class='thumb-info-act'>"+
+                                                "<span class='thumb-info-content'>"+
+                                                    "<h4>"+ val.title +"</h4>"+
+                                                    "<span class='date'>"+ val.date +"</span>"+
+                                                     "<button class='btn btn-primary btn-lg push-top push-bottom label label-primary'>"+
+                                                       "ver video"+
+                                                     "</button>"+
+                                                "</span>"+
+                                            "</span>"+
+
+                        "<img alt='' class='img-responsive' style='height: 225px; width: 351px;' src='"+ val.image +"'>"+
+                    "</span>"+
+                  "</a>"+
+                "</div>"+
+              "</article>"+
+
+              "<div class='modal fade' id='ytplayer-"+ key+ "' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' data-backdrop='static'>"+
+                "<div class='modal-dialog'>"+
+                  "<div class='modal-content'>"+
+                    "<div class='modal-header'>"+
+                      "<button type='button' class='close' data-dismiss='modal' aria-hidden='true' onclick='pauseVideo()' style='font-size: 40px;'>&times;</button>"+
+                      "<h4 class='modal-title' id='apoloLabel'>"+ val.title +"</h4>"+
+                    "</div>"+
+                    "<div class='modal-body mod'>"+
+                      "<div class='video-container youtube'>"+
+                        "<div id='player-"+ key+"'></div>"+
+                      "</div>"+
+                      "<p style='text-align: left; margin:10px;'>"+ val.subtitle+"</p>"+
+
+                    "</div>"+
+
+                  "</div>"+
+                "</div>"+
+              "</div>"
+
+                );              });     
+
+             
+
+              $( "<div/>", {
+                "id": "my-videos",
+                html: items.join( "" )
+              }).appendTo( ".timeline-body" );
+
+            });    
+            
+
+$.unblockUI();
+});
+
+ 
+
+
+</script>
+  <script src="https://www.youtube.com/iframe_api"></script>
 
 
     </body>
