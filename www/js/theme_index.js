@@ -978,7 +978,7 @@ $.getJSON( "http://atodomotor.com.ar/articles-json.json", function( data ) {
 
                                         "<div class='col-md-12'>"+
                                                 "<div><div class='post-image'>"+
-                                                        "<img class='img-responsive img-rounded' src='" + val.facebook_image.video_thumb.url +"' alt=''>"+
+                                                        "<img class='img-responsive img-rounded' src='" + val.facebook_image.video_thumb.url +"' alt='' style='width:100%;'>"+
                                                     "</div>"+
                                                 "</div></div></div>"+"<div class='row'>"+
                                         "<div class='col-md-12'>"+
