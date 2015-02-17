@@ -945,3 +945,15 @@ Description: 	Simple jQuery plugin designed to emulate an 'after resize' event.
 	};
 
 })(jQuery);
+
+function onDeviceReady () {
+     alert("Calling onDeviceReady()");
+    }
+
+// onDeviceReady: function() {
+// 	alert('');
+//       adbuddiz.setAndroidPublisherKey("eb6d0751-9cd4-4b29-85eb-6470313c3ffc");
+//       // adbuddiz.setIOSPublisherKey("TEST_PUBLISHER_KEY_IOS");
+//       adbuddiz.setTestModeActive();
+//       adbuddiz.cacheAds();
+//    }

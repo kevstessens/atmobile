@@ -1,0 +1,15 @@
+###                                HOW TO BUILD EXAMPLE                                ###
+
+First you need to execute the following command to link the project with the plugin :
+
+	cordova plugin add ../AdBuddizPlugin
+
+Then you need to execute the following commands to run the example on a device
+
+1. Android
+	cordova platform add android
+	cordova run android
+
+2. iOS
+	cordova platform add ios
+	cordova run ios
