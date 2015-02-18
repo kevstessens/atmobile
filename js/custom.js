@@ -1,19 +1,15 @@
 /* Add here all your JS customizations */
 
-adbuddiz.isReadyToShowAd(
-            function() { alert('SDK Loaded'); },
-            function() { alert('SDK Not Loaded') }
-        );  
 
-        function init(){
-            document.addEventListener("deviceready", onDeviceReady, false);
-        }
+function init(){
+    document.addEventListener("deviceready", onDeviceReady, false);
+}
 
-        function onDeviceReady(){
-            adbuddiz.setAndroidPublisherKey("eb6d0751-9cd4-4b29-85eb-6470313c3ffc");
-            adbuddiz.setTestModeActive();
-            adbuddiz.cacheAds();
-        }
+function onDeviceReady(){
+    adbuddiz.setAndroidPublisherKey("eb6d0751-9cd4-4b29-85eb-6470313c3ffc");
+    adbuddiz.setTestModeActive();
+    adbuddiz.cacheAds();
+}
 
 var id;
 var listId;
