@@ -202,19 +202,6 @@
     <script src="js/custom.js"></script>
 
     <script type="text/javascript">
-        
-
-        function init(){
-            document.addEventListener("deviceready", onDeviceReady, false);
-        }
-
-        function onDeviceReady(){
-            alert('hi');
-            adbuddiz.setAndroidPublisherKey("eb6d0751-9cd4-4b29-85eb-6470313c3ffc");
-            adbuddiz.setTestModeActive();
-            adbuddiz.cacheAds();
-        }
-
         adbuddiz.isReadyToShowAd(
             function() { alert('SDK Loaded'); },
             function() { alert('SDK Not Loaded') }
@@ -222,9 +209,7 @@
     </script>
 
     <script type="text/javascript">
-        $(document).ready(function(){
-            adbuddiz.showAd();
-        });
+        adbuddiz.showAd();
     </script>
 
     </body>
