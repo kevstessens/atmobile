@@ -209,13 +209,22 @@
         }
 
         function onDeviceReady(){
+            alert('hi');
             adbuddiz.setAndroidPublisherKey("eb6d0751-9cd4-4b29-85eb-6470313c3ffc");
-            // adbuddiz.setIOSPublisherKey("TEST_PUBLISHER_KEY_IOS");
             adbuddiz.setTestModeActive();
             adbuddiz.cacheAds();
         }
-        
-        adbuddiz.showAd();            
+
+        adbuddiz.isReadyToShowAd(
+            function() { alert('SDK Loaded'); },
+            function() { alert('SDK Not Loaded') }
+        );         
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            adbuddiz.showAd();
+        });
     </script>
 
     </body>
