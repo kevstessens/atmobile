@@ -7,6 +7,7 @@ function init(){
 
 function onDeviceReady(){
     adbuddiz.setAndroidPublisherKey("eb6d0751-9cd4-4b29-85eb-6470313c3ffc");
+    adbuddiz.setTestModeActive();
     adbuddiz.cacheAds();
 }
 
