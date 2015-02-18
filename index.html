@@ -202,14 +202,17 @@
     <script src="js/custom.js"></script>
 
     <script type="text/javascript">
+    function loadWindowSystem(){
         adbuddiz.isReadyToShowAd(
             function() { alert('SDK Loaded'); },
             function() { alert('SDK Not Loaded') }
-        );         
-    </script>
-
-    <script type="text/javascript">
+        );
         adbuddiz.showAd();
+    }
+
+    $(document).ready(function(){
+        loadWindowSystem();
+    })
     </script>
 
     </body>
